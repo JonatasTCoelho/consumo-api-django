@@ -6,12 +6,12 @@ class FeriadoForm(forms.Form):
     dia = forms.IntegerField()
     mes = forms.IntegerField()
     ano = forms.IntegerField()
-    def clean_nome(self):
+    def verify_name(self):
         nome = self.cleaned_data['nome']
         return nome.upper()
 
-    def clean_dia(self):
+    def verify_day(self):
             dia = self.cleaned_data['dia']
             if dia < 1 or dia > 30:
-                raise TypeError('O dia inserido é inválido')
+                raise TypeError('Atenção! Dia inválido')
             return dia

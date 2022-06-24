@@ -13,4 +13,11 @@ class FeriadoModel(models.Model):
         
 def __str__(self):
     return self.nome
+
+class FeriadoModelApi(models.Model):
+    nome = models.CharField('feriado', max_length=200)
+    data = models.DateField('data')
+
+    def __str__(self):
+        return self.nome
 # Create your models here.

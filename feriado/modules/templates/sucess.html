@@ -16,10 +16,11 @@
 <body>
 
     <div class="msg">
-        <h1> Cadastro {{ feriado }} feito com sucesso !!!</h1>
+        <h1> O Cadastro {{ feriado }} foi realizado com sucesso !!!</h1>
     </div>
-
-
+    <center>
+    <a class="btn btn-warning" role="button" aria-pressed="true" href={% url 'cadastro' %}>Cadastrar mais feriados</a>
+</center>
 </body>
 
 <style>
@@ -30,6 +31,7 @@
         font-size: 22px;
         line-height: 10px;
         color: grey;
+        text-align: center;
     }
 </style>
 </html>
