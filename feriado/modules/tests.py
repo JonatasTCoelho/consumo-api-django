@@ -6,7 +6,10 @@ from .forms import FeriadoForm
 
 class FeriadoFormTest(TestCase):
     def test_form_has_fields(self):
-        if 10 > 5:
-            return True
-        else:
-            return False
+        form = FeriadoForm()
+        expected = ['nome', 'dia', 'mes', 'ano']
+        self.assertSequenceEqual(expected, list(form.fields))
+        
+    def test_properties(self):
+        objeto = FeriadosAPI(2022)
+        assert objeto.ano == '2022'
